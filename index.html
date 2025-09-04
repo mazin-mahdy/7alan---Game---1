@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors - 4 Players</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors - 4 Players</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
-        <div class="subtitle">4 Player Battle - Control All Players</div>
-    </header>
-    
-    <div class="container">
-        <div class="players-container">
-            <div class="player active" id="player1">
-                <div class="player-name">Player 1</div>
-                <div class="player-choice">❔</div>
-                <div class="choices">
-                    <div class="choice-btn" data-choice="rock">✊</div>
-                    <div class="choice-btn" data-choice="paper">✋</div>
-                    <div class="choice-btn" data-choice="scissors">✌️</div>
-                </div>
-                <div class="player-status">Click to choose</div>
-            </div>
-            
-            <div class="player" id="player2">
-                <div class="player-name">Player 2</div>
-                <div class="player-choice">❔</div>
-                <div class="choices">
-                    <div class="choice-btn" data-choice="rock">✊</div>
-                    <div class="choice-btn" data-choice="paper">✋</div>
-                    <div class="choice-btn" data-choice="scissors">✌️</div>
-                </div>
-                <div class="player-status">Click to choose</div>
-            </div>
-            
-            <div class="player" id="player3">
-                <div class="player-name">Player 3</div>
-                <div class="player-choice">❔</div>
-                <div class="choices">
-                    <div class="choice-btn" data-choice="rock">✊</div>
-                    <div class="choice-btn" data-choice="paper">✋</div>
-                    <div class="choice-btn" data-choice="scissors">✌️</div>
-                </div>
-                <div class="player-status">Click to choose</div>
-            </div>
-            
-            <div class="player" id="player4">
-                <div class="player-name">Player 4</div>
-                <div class="player-choice">❔</div>
-                <div class="choices">
-                    <div class="choice-btn" data-choice="rock">✊</div>
-                    <div class="choice-btn" data-choice="paper">✋</div>
-                    <div class="choice-btn" data-choice="scissors">✌️</div>
-                </div>
-                <div class="player-status">Click to choose</div>
-            </div>
-        </div>
-        
-        <div class="controls">
-            <button id="reset-btn">Reset Game</button>
-        </div>
-        
-        <div class="results">
-            <div class="result-text">Make your selections!</div>
-            <div class="round-result">Click on each player to make their choice</div>
-        </div>
-    </div>
-    
-    <div class="instructions">
-        <h3>How to Play</h3>
-        <p>Click on each player box to activate it, then select Rock, Paper, or Scissors for that player</p>
-        <p>After all players have made their selections, the winner will be announced automatically</p>
-        <p>Rock beats Scissors, Scissors beats Paper, Paper beats Rock</p>
-        <p>If multiple players choose the same winning hand, they all win the round</p>
+  <header>
+    <h1>Rock Paper Scissors</h1>
+    <p class="subtitle">4 Player Multiplayer</p>
+  </header>
+
+  <section class="rules">
+    <h2>📜 How to Play</h2>
+    <ul>
+      <li>Each player chooses Rock ✊, Paper ✋, or Scissors ✌️ in their own box.</li>
+      <li>Click <b>Submit</b> after choosing.</li>
+      <li>When all 4 players have submitted, the results will be shown.</li>
+      <li>Winner is decided by classic rules:</li>
+      <ul>
+        <li>Rock beats Scissors</li>
+        <li>Scissors beats Paper</li>
+        <li>Paper beats Rock</li>
+      </ul>
+      <li>If multiple players win, it’s a tie between them.</li>
+    </ul>
+  </section>
+
+  <div class="players-container">
+    <div class="player" id="player1">
+      <h2>Player 1</h2>
+      <div class="choices">
+        <button data-choice="rock">✊</button>
+        <button data-choice="paper">✋</button>
+        <button data-choice="scissors">✌️</button>
+      </div>
+      <button class="submit-btn">Submit</button>
+      <p class="status">Pick and Submit</p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="player" id="player2">
+      <h2>Player 2</h2>
+      <div class="choices">
+        <button data-choice="rock">✊</button>
+        <button data-choice="paper">✋</button>
+        <button data-choice="scissors">✌️</button>
+      </div>
+      <button class="submit-btn">Submit</button>
+      <p class="status">Pick and Submit</p>
+    </div>
+
+    <div class="player" id="player3">
+      <h2>Player 3</h2>
+      <div class="choices">
+        <button data-choice="rock">✊</button>
+        <button data-choice="paper">✋</button>
+        <button data-choice="scissors">✌️</button>
+      </div>
+      <button class="submit-btn">Submit</button>
+      <p class="status">Pick and Submit</p>
+    </div>
+
+    <div class="player" id="player4">
+      <h2>Player 4</h2>
+      <div class="choices">
+        <button data-choice="rock">✊</button>
+        <button data-choice="paper">✋</button>
+        <button data-choice="scissors">✌️</button>
+      </div>
+      <button class="submit-btn">Submit</button>
+      <p class="status">Pick and Submit</p>
+    </div>
+  </div>
+
+  <div id="result" class="result"></div>
+  <button id="reset-btn" class="reset-btn" style="display:none;">🔄 Play Again</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
